@@ -38,9 +38,9 @@ const router = useRouter()
 
 const selecionarCertificado = (event: Event) => {
   const input = event.target as HTMLInputElement
-  if (input.files?.length) {
-    certificado.value = input.files[0]
-  }
+  const arquivo = input.files?.[0]
+  if (!arquivo) return
+  certificado.value = arquivo
 }
 
 const login = () => {
