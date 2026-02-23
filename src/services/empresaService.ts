@@ -31,5 +31,12 @@ export const empresaService = {
         api.put(`/empresas/${id}/aprovar`),
 
     reprovar: (id: number) =>
-        api.put(`/empresas/${id}/reprovar`)
+        api.put(`/empresas/${id}/reprovar`),
+
+    upload: (empresaId: number, arquivo: File) => {
+        const formData = new FormData()
+        formData.append('arquivo', arquivo)
+        return api.post(`/documentos/${empresaId}`, formData)
+    }
+
 }
