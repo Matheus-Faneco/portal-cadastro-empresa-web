@@ -11,8 +11,8 @@ Tecnologias que foram utilizadas
 
 ---
 Para rodar a aplicação
-`npm install`
-`npm run dev`
+1. `npm install`
+2.  `npm run dev`
 
 Obs: 
 - O backend tem que estar rodando em http://localhost:8080
